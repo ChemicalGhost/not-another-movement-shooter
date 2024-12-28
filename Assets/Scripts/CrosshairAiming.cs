@@ -28,25 +28,32 @@ public class CrosshairAiming : MonoBehaviour
     void SetUpRay()
     {
 
-        Vector3 ray = cameraa.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.5f));
+        Vector3 rayOriginPos = rayOrigin.transform.position;
+        Vector3 rayDirection = cameraa.transform.forward;
+        Ray cameraRay = cameraa.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.5f));
 
-        if (Physics.Raycast(rayOrigin.GetComponent<Transform>().position, cameraa.transform.forward, out RaycastHit hitInfo, 20.0f))
+
+        if (Physics.Raycast(cameraRay, out RaycastHit hitInfo, 100.0f))
         // if (Physics.Raycast(rayOrigin.GetComponent<Transform>().position, rayOrigin.GetComponent<Transform>().forward, out RaycastHit hitInfo, 20.0f))
         {
-            Debug.Log("Hit SOMETHING");
+            Debug.Log("Hit SOMETHING"+ hitInfo.point + hitInfo.distance);
             // Debug.DrawLine(rayOrigin.GetComponent<Transform>().position, hitInfo.point, Color.red, 1.5f);
-            RenderLine(rayOrigin.GetComponent<Transform>().position, hitInfo.point);
+            RenderLine(rayOriginPos, hitInfo.point);
 
         }
         else
         {
             Debug.Log("NOTHING");
+            // Optional: Extend the line to a maximum distance if no hit
+            Vector3 maxDistancePoint = rayOriginPos + rayDirection * 100.0f;
+            RenderLine(rayOriginPos, maxDistancePoint);
         }
     }
 
     void RenderLine(Vector3 lineOrign, Vector3 lineDestination)
     {
         lineRenderer.SetPosition(0, lineOrign);
-        lineRenderer.SetPosition(1, lineDestination + cameraa.transform.forward);
+        lineRenderer.SetPosition(1, lineDestination);
+        // lineRenderer.sharedMaterial.SetColor("_Color", Color.green);
     }
 }
