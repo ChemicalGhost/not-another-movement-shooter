@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float playerSpeed = 2.0f;
 
-    void Update()
+    void LateUpdate()
     {
         MovePlayer();
         MouseRotatePlayer();
