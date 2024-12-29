@@ -33,7 +33,7 @@ public class CrosshairAiming : MonoBehaviour
         Ray cameraRay = cameraa.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.5f));
 
         if (Physics.Raycast(cameraRay, out RaycastHit hitInfo, 100.0f))
-        // if (Physics.Raycast(rayOrigin.GetComponent<Transform>().position, rayOrigin.GetComponent<Transform>().forward, out RaycastHit hitInfo, 20.0f))
+        
         {
             if (Physics.Raycast(rayOriginPos, hitInfo.point, out RaycastHit weaponHitInfo, 100.0f))
             {
@@ -42,8 +42,8 @@ public class CrosshairAiming : MonoBehaviour
 
             }
             Debug.Log("Hit SOMETHING" + hitInfo.point + hitInfo.distance);
-            // Debug.DrawLine(rayOrigin.GetComponent<Transform>().position, hitInfo.point, Color.red, 1.5f);
-            RenderLine(cameraRay.origin, hitInfo.point);
+            
+            // RenderLine(cameraRay.origin, hitInfo.point);
 
         }
         else
