@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class EnemyPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField] public int health = 100;
+    [SerializeField] TextMeshPro healthText;
+
     void Start()
     {
-        
+        DisplayHealth();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        DisplayHealth();
     }
+
+    void DisplayHealth()
+    {
+        healthText.text = health.ToString();
+    }
+
+
 }

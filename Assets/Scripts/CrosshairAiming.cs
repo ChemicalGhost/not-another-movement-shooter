@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 public class CrosshairAiming : MonoBehaviour
 {
     // [SerializeField] Sprite crosshairSprite;
@@ -20,7 +21,7 @@ public class CrosshairAiming : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         SetUpRay();
     }
@@ -33,22 +34,30 @@ public class CrosshairAiming : MonoBehaviour
         Ray cameraRay = cameraa.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.5f));
 
         if (Physics.Raycast(cameraRay, out RaycastHit hitInfo, 100.0f))
-        
+
         {
-            if (Physics.Raycast(rayOriginPos, hitInfo.point, out RaycastHit weaponHitInfo, 100.0f))
+            // RenderLine(cameraRay.origin, hitInfo.point);
+
+            // Calculate direction for the second ray
+            Vector3 secondRayDirection = (hitInfo.point - rayOriginPos).normalized;
+
+            // Cast the second ray from the gun towards the first hit point
+            if (Physics.Raycast(rayOriginPos, secondRayDirection, out RaycastHit weaponHitInfo, hitInfo.distance))
             {
 
+                Debug.Log("Hit SOMETHING" + hitInfo.point + hitInfo.distance);
                 RenderLine(rayOriginPos, weaponHitInfo.point);
 
             }
-            Debug.Log("Hit SOMETHING" + hitInfo.point + hitInfo.distance);
-            
-            // RenderLine(cameraRay.origin, hitInfo.point);
+            else
+            {
+                Debug.Log("NOTHING");
+
+            }
 
         }
         else
         {
-            Debug.Log("NOTHING");
             // Optional: Extend the line to a maximum distance if no hit
             Vector3 maxDistancePoint = rayOriginPos + rayDirection * 100.0f;
             RenderLine(rayOriginPos, maxDistancePoint);
@@ -60,5 +69,18 @@ public class CrosshairAiming : MonoBehaviour
         lineRenderer.SetPosition(0, lineOrign);
         lineRenderer.SetPosition(1, lineDestination);
         // lineRenderer.sharedMaterial.SetColor("_Color", Color.green);
+    }
+
+
+    void HitByBullet()
+    {
+        // if (health > 0)
+        // {
+        //     // Debug.Log("");
+        // }
+        // else
+        // {
+
+        // }
     }
 }
