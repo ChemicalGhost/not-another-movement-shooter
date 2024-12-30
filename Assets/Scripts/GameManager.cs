@@ -6,12 +6,13 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject playerObject;
     [SerializeField] GameObject enemyObject;
+    private EnemyPlayer enemyPlayer;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        enemyObject.GetComponent<EnemyPlayer>();
+
     }
 
     // Update is called once per frame
@@ -19,4 +20,10 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
+    void DamageSystem(GameObject weapon)
+    {
+
+    }
+
 }
