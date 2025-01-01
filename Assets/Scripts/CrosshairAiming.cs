@@ -60,7 +60,19 @@ public class CrosshairAiming : MonoBehaviour
         {
             // Optional: Extend the line to a maximum distance if no hit
             Vector3 maxDistancePoint = rayOriginPos + rayDirection * 100.0f;
+
+            Vector3 secondRayDirection = (hitInfo.point - rayOriginPos).normalized;
+
+            if (Physics.Raycast(rayOriginPos, secondRayDirection, out RaycastHit weaponHitInfo))
+            {
+
+                Debug.Log("Hit SOMETHING" + hitInfo.point + hitInfo.distance);
+                RenderLine(rayOriginPos, weaponHitInfo.point);
+
+            }
+
             RenderLine(rayOriginPos, maxDistancePoint);
+
         }
     }
 
