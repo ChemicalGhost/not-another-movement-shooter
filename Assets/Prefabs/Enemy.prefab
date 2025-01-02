@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7713425643198532204}
   - component: {fileID: 6433220889416808830}
   - component: {fileID: 4921762906431569926}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 8120051462399694515}
   - component: {fileID: 2557544685583144317}
   - component: {fileID: 2314963361833345104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1000372279023250801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 8589807844921056716}
   - component: {fileID: 3658098377952010833}
   - component: {fileID: -2281428688539778972}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 3399553215877255}
   - component: {fileID: 1244595133363211640}
   - component: {fileID: 2105663872132738794}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,7 +504,7 @@ GameObject:
   - component: {fileID: 8326307455431820777}
   - component: {fileID: 1827804472231439090}
   - component: {fileID: 3081879886644157905}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 658937751656707356}
   - component: {fileID: 7825132357586287673}
   - component: {fileID: 6881308581566951444}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
