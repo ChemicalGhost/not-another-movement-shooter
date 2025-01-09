@@ -19,4 +19,8 @@ public class PlayerInvetory : MonoBehaviour
     {
 
     }
+
+    void AddItem(){
+        
+    }
 }
