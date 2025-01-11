@@ -1192,6 +1192,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1120724742}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eea9792a1bac64045997773a8dd337d8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1120724743}
   m_SourcePrefab: {fileID: 100100000, guid: eea9792a1bac64045997773a8dd337d8, type: 3}
 --- !u!4 &1120724741 stripped
 Transform:
@@ -1220,6 +1224,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.97, y: 1.36, z: 0.61}
   m_Center: {x: 0, y: 0.11, z: 0}
+--- !u!114 &1120724743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155871192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feea61f50b9462941ac251aec2d07a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  muzzlePoint: {fileID: 552183551}
+  damagePerBullet: 13
+  ammoSize: 12
+  fireRate: 2
 --- !u!1 &1127670161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,7 +1581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307493729}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.036074, y: -1.4125481e-15, z: 2.5216507e-16, w: 0.9993492}
+  m_LocalRotation: {x: 0.03607401, y: 0, z: 0, w: 0.9993491}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2163,7 +2183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992678774}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.05924301, y: -0.000000012255352, z: 7.273216e-10, w: 0.99824363}
+  m_LocalRotation: {x: 0.059243023, y: 0, z: 0, w: 0.99824363}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

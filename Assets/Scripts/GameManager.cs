@@ -21,7 +21,13 @@ public class GameManager : MonoBehaviour
 
     }
 
+
+
     void DamageSystem(GameObject weapon)
+    {
+
+    }
+    void weaponSystem(GameObject weapon)
     {
 
     }
