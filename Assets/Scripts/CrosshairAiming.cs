@@ -24,7 +24,7 @@ public class CrosshairAiming : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        SetUpRay();
+        // SetUpRay();
     }
 
     void SetUpRay()

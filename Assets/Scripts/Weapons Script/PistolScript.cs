@@ -8,6 +8,7 @@ public class PistolScript : MonoBehaviour
     [SerializeField] int damagePerBullet = 13;
     [SerializeField] int ammoSize = 12;
     [SerializeField] int fireRate = 2;
+    [SerializeField] bool isEquipped = false;
 
     LineRenderer lineRenderer;
 
@@ -23,7 +24,22 @@ public class PistolScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        PointToCrosshair();
+        // if (isEquipped)
+        // {
+
+        //     Fire();
+        // }
+    }
+
+    void Fire()
+    {
+
+        if (Input.GetMouseButton(0))
+        {
+            PointToCrosshair();
+            Debug.Log("GUN FIRED!!!");
+        }
+
     }
 
     void PointToCrosshair()

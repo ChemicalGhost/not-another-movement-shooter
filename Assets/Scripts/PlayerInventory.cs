@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerInvetory : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    Array invetory;
+    [SerializeField] GameObject weaponPlacement;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,8 @@ public class PlayerInvetory : MonoBehaviour
 
     }
 
-    void AddItem(){
-        
+    void AddItem()
+    {
+
     }
 }
