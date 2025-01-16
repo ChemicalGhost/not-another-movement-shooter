@@ -173,7 +173,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 49.9964
+    FieldOfView: 49.98591
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -199,8 +199,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239778121}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.082480535, y: 0, z: 0, w: 0.9965927}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.38111442, z: 0.14043403}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -268,7 +268,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 49.9964
+  field of view: 49.98591
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Follow: {fileID: 2134894706}
   m_CommonLens: 1
   m_Lens:
-    FieldOfView: 49.9964
+    FieldOfView: 49.98591
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -678,7 +678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 552183552}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1175,10 +1175,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: eea9792a1bac64045997773a8dd337d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eea9792a1bac64045997773a8dd337d8,
         type: 3}
       propertyPath: m_Name
       value: PistolModelRemade
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eea9792a1bac64045997773a8dd337d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5195066292892710417, guid: eea9792a1bac64045997773a8dd337d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1200,6 +1215,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1120724744}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eea9792a1bac64045997773a8dd337d8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1120724745}
   m_SourcePrefab: {fileID: 100100000, guid: eea9792a1bac64045997773a8dd337d8, type: 3}
 --- !u!4 &1120724741 stripped
 Transform:
@@ -1350,6 +1369,33 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!54 &1120724745
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155871192}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1127670161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1478,6 @@ GameObject:
   - component: {fileID: 1209221250}
   - component: {fileID: 1209221249}
   - component: {fileID: 1209221254}
-  - component: {fileID: 1209221255}
   - component: {fileID: 1209221256}
   m_Layer: 0
   m_Name: Character
@@ -1574,29 +1619,6 @@ MonoBehaviour:
   rotationSpeed: 10
   bottomClamp: -40
   topClamp: 70
---- !u!136 &1209221255
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209221248}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &1209221256
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1612,7 +1634,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1665,7 +1687,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 49.9964
+    FieldOfView: 49.98591
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -1691,8 +1713,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307493729}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.03607401, y: 0, z: 0, w: 0.9993491}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.03608506, y: 0, z: 0, w: 0.99934876}
+  m_LocalPosition: {x: 0, y: -0.00000011920929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2115,7 +2137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1209221248}
-  weaponPlacement: {fileID: 0}
+  weaponPlacement: {fileID: 1624978458}
 --- !u!1 &1918201178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,7 +2290,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 49.9964
+    FieldOfView: 49.98591
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -2294,8 +2316,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992678774}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.059243023, y: 0, z: 0, w: 0.99824363}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.059248567, y: 0, z: 0, w: 0.9982433}
+  m_LocalPosition: {x: 0, y: -0.00000011920929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

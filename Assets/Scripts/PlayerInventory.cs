@@ -17,11 +17,34 @@ public class PlayerInvetory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // PickWeapon(player.GetComponent < CapsuleCollider);
     }
 
-    void AddItem()
+    void PickWeapon(Collision collision)
+    {
+
+        if (collision.gameObject.gameObject.layer == 7)
+        {
+            Debug.Log("Colliding WIth Weapon");
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 7)
+        {
+            Debug.Log("Colliding WIth Weapon " + collision.gameObject.name);
+        }
+    }
+    private void OnCollisionExit(Collision collision)
     {
 
     }
+
+    // private void OnCollisionStay(Collision collision)
+    // {
+
+    // }
+
+
 }
