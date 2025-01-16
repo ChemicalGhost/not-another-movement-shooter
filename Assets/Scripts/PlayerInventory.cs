@@ -31,9 +31,9 @@ public class PlayerInvetory : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Colliding WIth Weapon " + collision.gameObject.name);
         if (collision.gameObject.layer == 7)
         {
-            Debug.Log("Colliding WIth Weapon " + collision.gameObject.name);
         }
     }
     private void OnCollisionExit(Collision collision)
