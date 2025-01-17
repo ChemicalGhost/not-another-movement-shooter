@@ -179,6 +179,8 @@ MonoBehaviour:
   damagePerBullet: 13
   ammoSize: 12
   fireRate: 2
+  isEquipped: 0
+  weaponPlacement: {fileID: 0}
   cameraa: {fileID: 0}
 --- !u!120 &3392138341939975247
 LineRenderer:

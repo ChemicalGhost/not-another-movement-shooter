@@ -10,6 +10,8 @@ public class PistolScript : MonoBehaviour
     [SerializeField] int fireRate = 2;
     [SerializeField] bool isEquipped = false;
 
+    [SerializeField] GameObject weaponPlacement;
+
     LineRenderer lineRenderer;
 
     [SerializeField] Camera cameraa;
@@ -24,11 +26,15 @@ public class PistolScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // if (isEquipped)
-        // {
-
-        //     Fire();
-        // }
+        if (isEquipped)
+        {
+            PlaceWeaponInHand();
+            Fire();
+        }
+        else
+        {
+            Debug.Log("CAN'T BE FIRED");
+        }
     }
 
     void Fire()
@@ -90,6 +96,21 @@ public class PistolScript : MonoBehaviour
         // lineRenderer.sharedMaterial.SetColor("_Color", Color.green);
     }
 
+
+    void PlaceWeaponInHand()
+    {
+        GetComponent<Transform>().SetParent(weaponPlacement.transform, true);
+        GetComponent<Transform>().transform.position =  weaponPlacement.transform.position;
+    }
+
+    public void SetWeaponEquipState(bool option)
+    {
+        isEquipped = option;
+    }
+    public bool GetWeaponEquipState()
+    {
+        return isEquipped;
+    }
 
 
 }
