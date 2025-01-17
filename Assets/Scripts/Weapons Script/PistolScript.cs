@@ -100,7 +100,8 @@ public class PistolScript : MonoBehaviour
     void PlaceWeaponInHand()
     {
         GetComponent<Transform>().SetParent(weaponPlacement.transform, true);
-        GetComponent<Transform>().transform.position =  weaponPlacement.transform.position;
+        GetComponent<Transform>().transform.position = weaponPlacement.transform.position;
+        GetComponent<Transform>().transform.rotation = Quaternion.LookRotation(-weaponPlacement.transform.right);
     }
 
     public void SetWeaponEquipState(bool option)
