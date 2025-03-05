@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,6 +12,10 @@ public class CrosshairAiming : MonoBehaviour
     [SerializeField] GameObject rayOrigin;
     [SerializeField] LayerMask enemyLayerMask;
     [SerializeField] Camera cameraa;
+    [SerializeField] CinemachineFreeLook cineFreeLook;
+
+    bool isAimingDownSight;
+
     LineRenderer lineRenderer;
 
     // Start is called before the first frame update
@@ -25,6 +31,7 @@ public class CrosshairAiming : MonoBehaviour
     void FixedUpdate()
     {
         // SetUpRay();
+        PlayerADS();
     }
 
     void SetUpRay()
@@ -74,6 +81,13 @@ public class CrosshairAiming : MonoBehaviour
         lineRenderer.SetPosition(0, lineOrign);
         lineRenderer.SetPosition(1, lineDestination);
         // lineRenderer.sharedMaterial.SetColor("_Color", Color.green);
+    }
+
+
+    void PlayerADS()
+    {
+        Debug.Log($"ADSING{cineFreeLook.m_Transitions}");
+
     }
 
 
