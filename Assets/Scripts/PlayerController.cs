@@ -175,7 +175,7 @@ public class PlayerController : MonoBehaviour
         }
         if (isFlyer)
         {
-            MovePlayer();
+            // MovePlayer();
             HandleFlying();
         }
         MouseRotatePlayer();
